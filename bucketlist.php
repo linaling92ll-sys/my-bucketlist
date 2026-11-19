@@ -48,6 +48,10 @@ $activities = $bucketlist->getAll();
     <p>
         Prioritet: <?= htmlspecialchars($activity["priority"]) ?>
     </p>
+    <form action="delete.php" method="POST">
+        <input type="hidden" name="id" value="<?= htmlspecialchars((string) $activity["id"]) ?>">
+        <button type="submit">Ta bort</button>
+    </form>
 </article>
 
 <?php endforeach; ?>
