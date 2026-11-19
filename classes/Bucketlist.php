@@ -33,5 +33,25 @@ class Bucketlist
         //Hämtar resultat och returnerar de som en array
         return $statement->fetchAll(PDO::FETCH_ASSOC);
     }
+
+    //Lägger till en ny aktivitet i databasen
+    public function add(
+        string $name,
+        string $description,
+        string $priority
+    ): bool{
+        //SQL-fråga som lägger till en ny aktivitet i tabellen
+        $sql = "INSERT INTO bucketlist (name, description, priority) VALUES (:name, :description, :priority)";
+
+        //Förbereder SQL-frågan innan den skickas till databasen
+        $statement = $this->connection->prepare($sql);
+
+        //Skickar värdena till databasen och kör SQL-frågan
+        return $statement->execute([
+        ":name" => $name,
+        ":description" => $description,
+        ":priority" => $priority
+        ]);
+    }
 }
 ?>
