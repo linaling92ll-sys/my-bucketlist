@@ -53,5 +53,20 @@ class Bucketlist
         ":priority" => $priority
         ]);
     }
+
+    //Tar bort en aktivitet från databasen
+    public function delete(int $id): bool
+    {
+       //SQL-fråga som tar bort en aktivitet baserat på dess ID
+       $sql = "DELETE FROM bucketlist WHERE id = :id"; 
+
+       //Förbereder SQL-frågan
+       $statement = $this->connection->prepare($sql);
+
+       //Kör SQL-frågan med aktivitetens ID
+       return $statement->execute([
+       ":id" => $id
+       ]);
+    }
 }
 ?>
