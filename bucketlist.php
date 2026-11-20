@@ -15,16 +15,21 @@ $bucketlist = new Bucketlist();
 $activities = $bucketlist->getAll();
 
 ?>
-<section>
+<section class="add-section">
     <h2>Lägg till en aktivitet</h2>
     <form action="add.php" method="POST">
 
+    <div class="form-group">
         <label for="name">Aktivitet:</label>
         <input type="text" id="name" name="name" required>
+    </div>
 
+    <div class="form-group">
         <label for="description">Beskrivning:</label>
         <textarea id="description" name="description" required></textarea>
+    </div>
 
+    <div class="form-group">
         <label for="priority">Prioritet:</label>
         <select id="priority" name="priority" required>
             <option value="">Välj prioritet</option>
@@ -32,11 +37,13 @@ $activities = $bucketlist->getAll();
             <option value="Medel">Medel</option>
             <option value="Hög">Hög</option>
         </select>
+    </div>
 
-        <button type="submit">Lägg till aktivitet</button>
-    </form>
+    <button type="submit">Lägg till aktivitet</button>
+
+</form>
 </section>
-<section>
+<section class= "activities-section">
     <h2>Mina aktiviteter</h2>
     <?php if (!empty($activities)): ?>
         <?php foreach ($activities as $activity): ?>
