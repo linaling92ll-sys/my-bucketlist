@@ -3,32 +3,43 @@
 class Database
 {
     //Uppgifter som behövs för att ansluta till MySQL
-    private string $host = "127.0.0.1";
-    private string $database = "bucketlist_db";
-    private string $username = "root";
-    private string $password = "";
+    private string $host;
+    private string $database;
+    private string $username;
+    private string $password;
 
-    //Metod som skapar och returenerar en databasanslutning
+    //Hämtar databasuppgifterna från konfigurationsfilen
+    public function __construct() 
+    {
+        $config = require __DIR__."/db-config.php";
+
+        $this->host = $config["host"];
+        $this->database = $config["database"];
+        $this->username = $config["username"];
+        $this->password = $config["password"];
+    }
+
+    //Metod som skapar och returnerar en databasanslutning
     public function connect(): PDO 
     {
         try {
             //Skapar en anslutning med hjälp av PDO
-            $connection = new PDO("mysql:host={$this->host};dbname={$this->database};charset=utf8mb4",
+            $connection = new PDO(
+                "mysql:host=" . $this->host . ";dbname=" . $this->database . ";charset=utf8mb4",
             $this->username,
-            $this->password
-            );
+            $this->password);
 
-            //Gör så att PDO kastar fel om något går fel med databasen.
+            //Gör så att PDO kastar ett fel om något går fel
             $connection->setAttribute(
                 PDO::ATTR_ERRMODE,
                 PDO::ERRMODE_EXCEPTION
             );
 
-            //Returnerar anslutningen så att andra klasser kan använda den.
+            //Returnerar anslutningen
             return $connection;
         } catch (PDOException $e) {
-            //Visar ett felmeddelande om anslutningen misslyckas
-            die("Kunde inte ansluta till databasen: " . $e->getMessage());
+            //Visar ett felmeddelande om anslutningen misslyckdes
+            die("Kunde inte ansluta till databasen:" . $e->getMessage());
         }
     }
 }

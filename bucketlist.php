@@ -49,8 +49,8 @@ $activities = $bucketlist->getAll();
         <?php foreach ($activities as $activity): ?>
 
 <article>
-    <h3><?= htmlspecialchars($activity["NAME"]) ?></h3>
-    <p><?= htmlspecialchars($activity["DESCRIPTION"]) ?></p>
+    <h3><?= htmlspecialchars($activity["name"]) ?></h3>
+    <p><?= htmlspecialchars($activity["description"]) ?></p>
 
     <p>
         Prioritet: <?= htmlspecialchars($activity["priority"]) ?>
