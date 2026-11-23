@@ -1,8 +1,4 @@
 <?php
-
-ini_set("display_errors", "1");
-ini_set("display_startuo-errors", "1");
-error_reporting(E_ALL);
 //Anger sidans rubrik
 $pageTitle = "Min bucketlist";
 
@@ -53,8 +49,8 @@ $activities = $bucketlist->getAll();
         <?php foreach ($activities as $activity): ?>
 
 <article>
-    <h3><?= htmlspecialchars($activity["NAME"]) ?></h3>
-    <p><?= htmlspecialchars($activity["DESCRIPTION"]) ?></p>
+    <h3><?= htmlspecialchars($activity["name"]) ?></h3>
+    <p><?= htmlspecialchars($activity["description"]) ?></p>
 
     <p>
         Prioritet: <?= htmlspecialchars($activity["priority"]) ?>

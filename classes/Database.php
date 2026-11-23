@@ -15,8 +15,8 @@ class Database
 
         $this->host = $config["host"];
         $this->database = $config["database"];
-        $this->username = $username["username"];
-        $this->password = $password["password"];
+        $this->username = $config["username"];
+        $this->password = $config["password"];
     }
 
     //Metod som skapar och returnerar en databasanslutning
