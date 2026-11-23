@@ -1,5 +1,8 @@
 # Min Bucketlist
 
+## Publicerad webbplats
+[Min Bucketlist](https://mybucketlist.great-site.net)
+
 ## Om projektet
 Min Bucketlist är en webbplats där användaren kan samla saker som den vill uppleva, platser som den vill besöka
 och mål som den vill uppnå.
