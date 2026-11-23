@@ -1,11 +1,4 @@
-// Skapa databasen
-CREATE DATABASE IF NOT EXISTS bucketlist_db;
 
-//Välj databas
-USE bucketlist_db;
-
-//Kasta tabellen om den redan finns
-DROP TABLE IF EXISTS bucketlist;
 
 //Skapa bucketlist tabell
 CREATE TABLE bucketlist (
