@@ -27,6 +27,10 @@ require_once "includes/header.php";
     Jag fick också hjälp av AI för att göra test-filer så att jag kunde testa om min kod fungerade när jag gjorde anrop till 
     databasen.
 </p>
+<p>
+    När jag skulle publicera min webbplats så fick jag hjälp av AI för att kunna felsöka varför jag inte 
+    fick webbplatsen att fungera som den skulle.
+</p>
 </section>
 <section>
 <h2>Mina reflektioner</h2>
@@ -36,7 +40,6 @@ require_once "includes/header.php";
     förklaringar, men det är viktigt att själv förstå och kontrollera det som man får hjälp med av AI.
 </p>
 </section>
-
 <?php
 
 //Hämtar footern
