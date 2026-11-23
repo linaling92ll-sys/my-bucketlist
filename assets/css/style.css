@@ -1,0 +1,157 @@
+main {
+    width: 90%;
+    max-width: 1400px;
+    margin:40px auto;
+    padding: 30px;
+    box-sizing: border-box;
+    flex: 1;
+    line-height: 1.6;
+}
+
+section {
+    background-color: #CAD2C5;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+}
+
+h2 {
+    color:black;
+    margin-top: 0;
+}
+body {
+    background-color: #F5F3EF;
+    color: #333333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+}
+
+header h1 {
+    text-align: center;
+    margin: 15px 0 15px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    background-color: #52796F;
+    padding: 10px 20px;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+footer {
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: auto;
+    background-color: #354F52;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+input, textarea, select {
+    padding: 12px;
+    border: 1px solid #CAD2C5;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+button {
+    background-color: #52796F;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #354F52;
+}
+
+.add-section h2 {
+    text-align: center;
+}
+
+.add-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 700px;
+    margin: auto;
+    text-align: left;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+article {
+    background-color: #F5F3EF;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+}
+
+.activities-section article {
+    max-width: 700px;
+    margin: 0 auto 15px;
+}
+
+.activities-section h2 {
+    text-align: center;
+}
+
+main > section {
+    width: 100%;
+    max-width: none;
+    box-sizing: border-box;
+}
+
+@media (max-width: 600px) {
+    nav ul {
+        gap: 10px;
+        flex-wrap: wrap;
+        padding: 0 10px;
+    }
+
+    nav a {
+        padding: 8px 12px;
+        font-size: 15px;
+    }
+}
