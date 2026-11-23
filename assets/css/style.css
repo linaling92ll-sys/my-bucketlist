@@ -94,10 +94,18 @@ button:hover {
     background-color: #354F52;
 }
 
-form[action="add.php"] {
+.add-section h2 {
+    text-align: center;
+}
+
+.add-section form {
     display: flex;
     flex-direction: column;
     gap: 15px;
+    width: 100%;
+    max-width: 700px;
+    margin: auto;
+    text-align: left;
 }
 
 .form-group {
@@ -120,15 +128,15 @@ article {
     border-radius: 10px;
 }
 
-.activities-section {
-    width: 100%;
-    box-sizing: border-box;
+.activities-section article {
+    max-width: 700px;
+    margin: 0 auto 15px;
 }
 
-.activities-section article {
-    width: 100%;
-    box-sizing: border-box;
+.activities-section h2 {
+    text-align: center;
 }
+
 main > section {
     width: 100%;
     max-width: none;

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Min Bucketlist</title>
-    <link rel="stylesheet" href="/my-bucketlist/assets/css/style.css?=v1">
+    <link rel="stylesheet" href="/my-bucketlist/assets/css/style.css?=v2">
 </head>
 <body>
     <header>
