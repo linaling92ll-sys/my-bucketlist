@@ -9,7 +9,7 @@ class Database
     private string $password;
 
     //Hämtar databasuppgifterna från konfigurationsfilen
-    public function __construct(): 
+    public function __construct() 
     {
         $config = require __DIR__."/db-config.php";
 
@@ -24,7 +24,8 @@ class Database
     {
         try {
             //Skapar en anslutning med hjälp av PDO
-            $connection = new PDO("mysql:host={$this->host};dbname={$this->database};charset=utf8mb4",
+            $connection = new PDO(
+                "mysql:host=" . $this->host . ";dbname=" . $this->database . ";charset=utf8mb4",
             $this->username,
             $this->password);
 
@@ -38,7 +39,7 @@ class Database
             return $connection;
         } catch (PDOException $e) {
             //Visar ett felmeddelande om anslutningen misslyckdes
-            die("Kunde inte ansluta till databasen:" .$e->getMessage());
+            die("Kunde inte ansluta till databasen:" . $e->getMessage());
         }
     }
 }
