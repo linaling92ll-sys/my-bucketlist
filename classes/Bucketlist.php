@@ -1,6 +1,6 @@
 <?php
 //Hämtar Database-klassen
-require_once "Database.php";
+require_once __DIR__ . "/Database.php";
 
 //Klassen som hanterar bucketlistens aktiviteter
 class Bucketlist
