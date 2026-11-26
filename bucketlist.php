@@ -1,4 +1,6 @@
 <?php
+// Hämtar inställningar för felrapportering
+require_once __DIR__ . "/config.php";
 //Anger sidans rubrik
 $pageTitle = "Min bucketlist";
 

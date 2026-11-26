@@ -1,5 +1,6 @@
 <?php
-
+// Hämtar inställningar för felrapportering
+require_once __DIR__ . "/config.php";
 //Anger huvudrubrik
 $pageTitle = "AI i projektet";
 

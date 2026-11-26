@@ -1,5 +1,6 @@
 <?php
-
+// Hämtar inställningar för felrapportering
+require_once __DIR__ . "/config.php";
 //Kontrollera att formuläret har skickats
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     //Hämtar information från formuläret
