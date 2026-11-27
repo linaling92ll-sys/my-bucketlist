@@ -53,11 +53,11 @@ $activities = $bucketlist->getAll();
 <article>
     <h3><?= htmlspecialchars($activity["name"]) ?></h3>
     <p><?= htmlspecialchars($activity["description"]) ?></p>
-    <p>Tillagd: <?= date("Y-m-d", strtotime($activity["created_at"])) ?></p>
-
+    
     <p>
         Prioritet: <?= htmlspecialchars($activity["priority"]) ?>
     </p>
+    <p><b>Tillagd:</b> <?= date("Y-m-d", strtotime($activity["created_at"])) ?></p>
     <form action="delete.php" method="POST">
         <input type="hidden" name="id" value="<?= htmlspecialchars((string) $activity["id"]) ?>">
         <button type="submit">Ta bort</button>
